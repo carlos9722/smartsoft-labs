@@ -1,22 +1,47 @@
 <div class="topContainer">
   <div class="main">
-    <input type="checkbox" id="chk" aria-hidden="true">
+    <input type="checkbox" id="chk" aria-hidden="true" />
     <div class="signup">
       <form>
         <label for="chk" aria-hidden="true">Registro</label>
-        <input type="text" name="txt" placeholder="User name" >
-        <input type="email" name="email" placeholder="Email" >
-        <input type="password" name="pswd" placeholder="Password" >
-        <button >Sign up</button>
+        <input
+          type="text"
+          name="txt"
+          placeholder="User name"
+          [(ngModel)]="signupObj.userName"
+        />
+        <input
+          type="email"
+          name="email"
+          placeholder="Email"
+          [(ngModel)]="signupObj.email"
+        />
+        <input
+          type="password"
+          name="pswd"
+          placeholder="Password"
+          [(ngModel)]="signupObj.password"
+        />
+        <button (click)="onSignUp()">Sign up</button>
       </form>
     </div>
 
     <div class="login">
       <form>
         <label for="chk" aria-hidden="true">Inicia sesion</label>
-        <input type="text" name="userNmae" placeholder="User Name"  >
-        <input type="password" name="psswdord" placeholder="Password"  >
-        <button >Login</button>
+        <input
+          type="text"
+          name="emailId"
+          placeholder="User Email"
+          [(ngModel)]="loginObj.emailId"
+        />
+        <input
+          type="password"
+          name="psswdord"
+          placeholder="Password"
+          [(ngModel)]="loginObj.password"
+        />
+        <button (click)="onLogin()">Login</button>
       </form>
     </div>
   </div>
